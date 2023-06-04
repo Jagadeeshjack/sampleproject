@@ -1,0 +1,26 @@
+{%extends 'home.html'%}
+
+{%block a %}
+    <h1>Enquiries</h1>
+    <table border="" width="100%">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Course</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {%for a in data%}
+        <tr>
+            <td>{{a.name}}</td>
+            <td>{{a.mailid}}</td>
+            <td>{{a.phone}}</td>
+            <td>{{a.course}}</td>
+            <td><a href="edit/{{a.id}}" class="btn btn-warning">Edit</a></td>
+            <td><a href="delete/{{a.id}}" class="btn btn-danger">Delete</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+
+{%endblock%}

@@ -1,0 +1,35 @@
+{%extends 'home.html'%}
+{%block a%}
+  <h2>STUDENT DETAILS</h2>
+  <table border="" width="100%">
+    <tr>
+      <th>Student Id</th>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Mail Id </th>
+      <th>Course Name</th>
+      <th>Fees</th>
+      <th>Date of Joining</th>
+      <th>Status</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+
+    {%for a in student%}
+    <tr>
+      <td>{{a.stdId}}</td>
+      <td>{{a.name}}</td>
+      <td>{{a.mobile}}</td>
+      <td>{{a.mail}}</td>
+      <td>{{a.course}}</td>
+      <td>{{a.fees}}</td>
+      <td>{{a.date}}</td>
+      <td>{{a.status}}</td>
+      <td><a href="edit/{{a.stdId}}" class="btn btn-warning">Edit</a></td>
+      <td><a href="delete/{{a.stdId}}" class="btn btn-danger">Delete</a></td>
+    </tr>
+    {%endfor%}
+
+  </table>
+
+{%endblock%}

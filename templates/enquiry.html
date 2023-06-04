@@ -1,0 +1,10 @@
+{%extends 'home.html'%}
+
+{%block a%}
+<h1>Enquire Now</h1>
+    <form method="post">
+        {%csrf_token%}
+        {{sample.as_p}}
+        <input type="submit" value="ADD">
+    </form>
+{%endblock%}

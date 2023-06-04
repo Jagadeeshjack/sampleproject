@@ -1,0 +1,12 @@
+{%extends 'home.html'%}
+{%block title%}
+        <title>About</title>
+{%endblock%}
+{%block a%}
+    <h1>This is About Page</h1>
+    <p>Current time is 11.53</p>
+    <p>{{now}}</p>
+    <h2>{{student1 | lower}}</h2>
+    <h2>{{student2 | upper}}</h2>
+    {{student1|length}}
+{%endblock%}

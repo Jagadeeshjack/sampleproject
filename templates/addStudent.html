@@ -1,0 +1,10 @@
+{%extends 'home.html'%}
+
+{%block a%}
+    <h2>ADD STUDENT DATA</h2>
+    <form method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <input type="submit" value="Add">
+    </form>
+{%endblock%}
